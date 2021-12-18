@@ -7,6 +7,7 @@ import CarouselImage from "./components/CarouselImage";
 import Indicators from './components/Indicators';
 import Questions from './components/Questions';
 import InstructionModal from './components/InstructionModal';
+import { useSwipeable } from 'react-swipeable';
 
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [questionCompleted, setQuestionCompleted] = useState(false)
   const [show, setShow] = useState(false);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => updateIndex(activeIndex + 1),
+    onSwipedRight: () => updateIndex(activeIndex - 1)
+  })
 
     useEffect(() => {
         // Retrieve carousel items (images and questions)
@@ -60,7 +66,8 @@ function App() {
     <div className="App">
       {carouselList ? 
       <>  
-      <div className="container">
+      <div className="container" {...handlers}>
+        
         <Header />
         {/* <Carousel /> */}
         <div className="mainCarousel">
