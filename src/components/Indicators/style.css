@@ -13,6 +13,6 @@
     background-color: var(--lemon);
 }
 
-.indicator.active, .indicator:last-child{
+.indicator.active{
     background-color: black;
 }

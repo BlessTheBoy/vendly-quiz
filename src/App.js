@@ -14,6 +14,7 @@ function App() {
   const [images, setImages] = useState([])
   const [captions, setCaptions] = useState([])
   const [questions, setQuestions] = useState([])
+  const [activeIndex, setActiveIndex] = useState(0)
 
     useEffect(() => {
         // Retrieve carousel items (images and questions)
@@ -27,6 +28,16 @@ function App() {
         setCaptions(data.map(item => item.caption))      
     }, []);
 
+    const updateIndex = (index) => {
+      if (index < 0) {
+        index = 0;
+      } else if (index > images.length - 1) {
+        index = images.length - 1;
+      }
+
+      setActiveIndex(index)
+    }
+
 
   return (
     <div className="App">
@@ -34,11 +45,11 @@ function App() {
         <Header />
         {/* <Carousel /> */}
         <div className="mainCarousel">
-        <LeftArrow />
-        <CarouselImage />
-        <RightArrow />
+        <LeftArrow trigger={updateIndex} activeIndex={activeIndex} />
+        <CarouselImage images={images} activeIndex={activeIndex} />
+        <RightArrow trigger={updateIndex} activeIndex={activeIndex} />
       </div>
-      <Indicators arr={["a", "b", "c"]} />
+      <Indicators arr={carouselList} trigger={updateIndex} activeIndex={activeIndex} />
       <p className="carouselCaption">Livebridge giving alms on any given Sunday.</p>
       {questions ? <Questions questions={questions} /> : "loading"}
        <div className="submit">

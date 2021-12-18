@@ -1,9 +1,9 @@
 import './style.css';
 
-function Indicators({arr}) {
+function Indicators({arr, trigger, activeIndex}) {
     return (
         <div className='indicators'>
-            {arr.map(item => <div className="indicator"></div>)}
+            {arr.map((item, index) => <div key={index} className={`indicator ${index === activeIndex && "active"}`} onClick={() => trigger(index)}></div>)}
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import './style.css';
 
-function LeftArrow() {
+function LeftArrow({trigger, activeIndex}) {
     return (
-        <div className="leftArrow">
+        <div className="leftArrow" onClick={() => trigger( activeIndex - 1)}>
           <svg
             width="7"
             height="16"
