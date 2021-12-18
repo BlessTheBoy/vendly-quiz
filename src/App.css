@@ -55,7 +55,7 @@ color: #006E72;
   cursor: pointer;
 }
 
-.submitButton{
+.button{
   position: relative;
   width: 100%;
   padding: .5rem;
@@ -71,11 +71,11 @@ border-radius: 5px;
 margin-bottom: 1.5rem;
 }
 
-.submitButton:disabled{
+.button:disabled{
   background-color: rgba(155, 155, 155, 0.76);
   pointer-events: none;
 }
-.submitButton::after{
+.button::after{
   content: ">";
   position: absolute;
   top: 0;
@@ -85,17 +85,17 @@ margin-bottom: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
 
-.submitButton.active::after{
+.button.active::after{
   opacity: 1;
   top: 50%;
 }
 
-.submitButton:hover, .submitButton:active{
+.button:hover, .button:active{
   
   background: #005255;
 }
 
-@media screen and (min-height: 600px ) {
+@media screen and (min-height: 680px ) {
   .container{
     height: calc(100vh - 4.8125rem);
   }

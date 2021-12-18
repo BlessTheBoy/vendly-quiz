@@ -72,7 +72,7 @@ function App() {
       <p className="carouselCaption">{captions[activeIndex]}</p>
       {questions ? <Questions questions={questions} activeIndex={activeIndex} submitAnswer={addAnswer} /> : "loading"}
        <div className="submit">
-        <button className={`submitButton ${questionCompleted && "active"} `}  disabled={!questionCompleted} onClick={submitAnswers}>Continue</button>
+        <button className={`button ${questionCompleted && "active"} `}  disabled={!questionCompleted} onClick={submitAnswers}>Continue</button>
         <p className="instructions">Read <span onClick={() => setShow(true)}>Instructions</span></p>
         <InstructionModal title="My Modal" onClose={() => setShow(false)} show={show} />
        </div>
