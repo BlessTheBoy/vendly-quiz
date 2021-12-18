@@ -97,7 +97,7 @@ margin-bottom: 1.5rem;
   background: #005255;
 }
 
-@media screen and (min-height: 680px ) {
+@media screen and (min-height: 600px ) {
   .container{
     height: calc(100vh - 4.8125rem);
   }
