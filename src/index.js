@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './fonts/Axiforma/Axiforma-Bold.ttf';
-import './fonts/Axiforma/Axiforma-Medium.ttf';
-import './fonts/Axiforma/Axiforma-Regular.ttf';
-import './fonts/Axiforma/Axiforma-SemiBold.ttf';
+import './assets/fonts/Axiforma/Axiforma-Bold.ttf';
+import './assets/fonts/Axiforma/Axiforma-Medium.ttf';
+import './assets/fonts/Axiforma/Axiforma-Regular.ttf';
+import './assets/fonts/Axiforma/Axiforma-SemiBold.ttf';
 
 ReactDOM.render(
   <React.StrictMode>

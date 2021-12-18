@@ -4,29 +4,37 @@
   box-sizing: border-box;
 }
 
+/* Variables */
+:root{
+  --lemon: #82ECD3;
+  --cyan: #006E72;
+  --padding-mobile-reg: 1rem;
+  --padding-mobile-med: 1.5rem;
+}
+
 
 /* Fonts */
 @font-face {
   font-family: "Axiforma";
   src: local("Axiforma"),
-   url("./fonts/Axiforma/Axiforma-Regular.ttf") format("truetype");
+   url("./assets/fonts/Axiforma/Axiforma-Regular.ttf") format("truetype");
   font-weight: 400;
   }
 @font-face {
   font-family: "AxiformaMedium";
   src: local("Axiforma"),
-   url("./fonts/Axiforma/Axiforma-Medium.ttf") format("truetype");
+   url("./assets/fonts/Axiforma/Axiforma-Medium.ttf") format("truetype");
   font-weight: 500;
   }
 @font-face {
   font-family: "AxiformaSemiBold";
   src: local("Axiforma"),
-   url("./fonts/Axiforma/Axiforma-SemiBold.ttf") format("truetype");
+   url("./assets/fonts/Axiforma/Axiforma-SemiBold.ttf") format("truetype");
   font-weight: 600;
   }
 @font-face {
   font-family: "AxiformaBold";
   src: local("Axiforma"),
-   url("./fonts/Axiforma/Axiforma-Bold.ttf") format("truetype");
+   url("./assets/fonts/Axiforma/Axiforma-Bold.ttf") format("truetype");
   font-weight: 800;
   }

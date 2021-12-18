@@ -1,5 +1,77 @@
 .App {
-  text-align: center;
   font-family: "Axiforma", sans-serif;
+  background: url(assets/images/voucher.jpg) no-repeat top center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 2.75rem 1.125rem 2.0625rem;
 }
 
+.container{
+ width: 100%;
+ background-color: white;
+ padding: var(--padding-mobile-reg) 0;
+ border: 1px solid var(--lemon);
+ display: flex;
+ flex-direction: column;
+ height: auto;
+ overflow-y: auto;
+ 
+ /* margin: 2.75rem 1.125rem 2.0625rem; */
+}
+.mainCarousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  column-gap: .5rem;
+  padding: 0 .2rem;
+}
+.carouselCaption{
+  text-align: center;
+  padding: 0 var(--padding-mobile-med);
+  font-family: "Axiforma", sans-serif;
+font-weight: 400;
+font-size: 0.6875rem;
+line-height: 1.55;
+color: var(--cyan);
+}
+
+.submit{
+  width: 100%;
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+}
+
+.submit .instructions{
+  font-family: "Axiforma", sans-serif;
+  font-weight: 500;
+font-size: 0.75rem;
+line-height: 1.58;
+color: #006E72;
+}
+
+.submit .instructions span{
+  color: var(--lemon);
+  cursor: pointer;
+}
+
+.submitButton{
+  width: 100%;
+  padding: .5rem;
+  color: white;
+  background: var(--cyan);
+  outline: none;
+  border: none;
+  font-family: "AxiformaBold", sans-serif;
+font-weight: 800;
+font-size: 0.9375rem;
+line-height: 1.667;
+border-radius: 5px;
+margin-bottom: 1.5rem;
+}
+
+@media screen and (min-height: 500px ) {
+  .container{
+    height: calc(100vh - 4.8125rem);
+  }
+}

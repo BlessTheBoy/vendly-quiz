@@ -1,0 +1,14 @@
+.questionsContainer{
+    flex: 1;
+    margin-top: 21px;    
+    overflow-y: scroll;
+}
+
+.questions{
+    padding: 0 var(--padding-mobile-med);
+    padding-left: 2.5rem;
+}
+
+.questions:last-child{
+    display: none;
+}

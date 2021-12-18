@@ -1,0 +1,18 @@
+.indicators{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem var(--padding-mobile-med);
+    column-gap: .3rem;
+}
+
+.indicator{
+    width: 0.32rem;
+    height: 0.32rem;
+    border-radius: 50%;
+    background-color: var(--lemon);
+}
+
+.indicator.active, .indicator:last-child{
+    background-color: black;
+}

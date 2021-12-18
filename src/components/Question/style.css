@@ -1,0 +1,45 @@
+li.question{
+    padding-left: 0;
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+li::marker{
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    color: var(--cyan);
+}
+
+.question_question{
+    font-family: "AxiformaBold", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+font-size: 0.90625rem;
+line-height: 1.655;
+
+    margin-bottom: 1rem;
+}
+
+.question_options{
+font-family: "Axiforma", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 0.844rem;
+line-height: 1.57;
+color: var(--cyan);
+}
+
+.radio{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.radio input{
+    accent-color: var(--cyan);
+    height: 1rem;
+    width: 1rem;
+    margin-right: 12px;
+    padding-top: 0.5rem;
+}
