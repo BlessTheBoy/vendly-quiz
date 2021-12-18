@@ -1,5 +1,4 @@
 import './App.css';
-import Carousel from './components/Carousel';
 import Header from './components/Header';
 import { useEffect, useState } from 'react';
 import RightArrow from "./components/RightArrow";
@@ -7,6 +6,7 @@ import LeftArrow from "./components/LeftArrow";
 import CarouselImage from "./components/CarouselImage";
 import Indicators from './components/Indicators';
 import Questions from './components/Questions';
+import InstructionModal from './components/InstructionModal';
 
 
 function App() {
@@ -15,6 +15,8 @@ function App() {
   const [captions, setCaptions] = useState([])
   const [questions, setQuestions] = useState([])
   const [activeIndex, setActiveIndex] = useState(0)
+  const [questionCompleted, setQuestionCompleted] = useState(false)
+  const [show, setShow] = useState(false);
 
     useEffect(() => {
         // Retrieve carousel items (images and questions)
@@ -42,8 +44,15 @@ function App() {
     const addAnswer = (questionIndex, answer) => {
       const newQuestions = [...questions];
       newQuestions[questionIndex[0]][questionIndex[1]].answer = answer;
-      console.log(newQuestions)
-      setQuestions(newQuestions)
+      newQuestions.every(question => question.every(item => item.answer !== undefined)) ? setQuestionCompleted(true) : setQuestionCompleted(false)
+      setQuestions(newQuestions)      
+    }
+
+    const submitAnswers = () => {
+      if (questionCompleted) {
+        // Post to Submit answers
+        console.log(questions)
+      }
     }
 
 
@@ -63,8 +72,9 @@ function App() {
       <p className="carouselCaption">{captions[activeIndex]}</p>
       {questions ? <Questions questions={questions} activeIndex={activeIndex} submitAnswer={addAnswer} /> : "loading"}
        <div className="submit">
-        <button className="submitButton">Continue</button>
-        <p className="instructions">Read <span>Instructions</span></p>
+        <button className={`submitButton ${questionCompleted && "active"} `}  disabled={!questionCompleted} onClick={submitAnswers}>Continue</button>
+        <p className="instructions">Read <span onClick={() => setShow(true)}>Instructions</span></p>
+        <InstructionModal title="My Modal" onClose={() => setShow(false)} show={show} />
        </div>
       </div>
       </> : ""}

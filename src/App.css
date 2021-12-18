@@ -56,6 +56,7 @@ color: #006E72;
 }
 
 .submitButton{
+  position: relative;
   width: 100%;
   padding: .5rem;
   color: white;
@@ -70,7 +71,31 @@ border-radius: 5px;
 margin-bottom: 1.5rem;
 }
 
-@media screen and (min-height: 500px ) {
+.submitButton:disabled{
+  background-color: rgba(155, 155, 155, 0.76);
+  pointer-events: none;
+}
+.submitButton::after{
+  content: ">";
+  position: absolute;
+  top: 0;
+  right: 2.3125rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.submitButton.active::after{
+  opacity: 1;
+  top: 50%;
+}
+
+.submitButton:hover, .submitButton:active{
+  
+  background: #005255;
+}
+
+@media screen and (min-height: 600px ) {
   .container{
     height: calc(100vh - 4.8125rem);
   }

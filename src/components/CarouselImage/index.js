@@ -1,4 +1,3 @@
-import liverBridge from "./../../assets/images/liverbridge.png";
 import "./style.css";
 
 function CarouselImage({ images, activeIndex }) {
