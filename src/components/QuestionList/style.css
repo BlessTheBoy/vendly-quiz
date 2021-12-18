@@ -1,0 +1,9 @@
+.questionlist {
+    padding: 0 var(--padding-mobile-med);
+    padding-left: 2.5rem;
+    display: none;
+}
+
+.questionlist.active{
+    display: block;
+}

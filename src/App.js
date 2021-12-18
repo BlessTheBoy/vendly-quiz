@@ -20,7 +20,7 @@ function App() {
         // Retrieve carousel items (images and questions)
         const data = [
           {image: "liverbridge.png", caption: "Livebridge giving alms on any given Sunday.", questions: [{id: 1, question: "How many times has Vendly been redesigned?", option: ["Five times", "Four times", "Three times", "Two times"]}, {id: 2, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
-          {image: "voucher.jpg", caption: "voucher", questions: [{id: 1, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
+          {image: "voucher.jpg", caption: "voucher", questions: [{id: 1, question: "When was Vendly first redesign?", option: ["2021", "2020", "2019"]}]},
           {image: "character.png", caption: "character", questions: [{id: 1, question: "Who is the current C.E.O of Vendly?", option: ["Bob Nzelu", "Micheal Opara", "Vanessa Mdee"]}]},
       ]
         setCarouselList(data)
@@ -39,6 +39,13 @@ function App() {
       setActiveIndex(index)
     }
 
+    const addAnswer = (questionIndex, answer) => {
+      const newQuestions = [...questions];
+      newQuestions[questionIndex[0]][questionIndex[1]].answer = answer;
+      console.log(newQuestions)
+      setQuestions(newQuestions)
+    }
+
 
   return (
     <div className="App">
@@ -54,7 +61,7 @@ function App() {
       </div>
       <Indicators arr={carouselList} trigger={updateIndex} activeIndex={activeIndex} />
       <p className="carouselCaption">{captions[activeIndex]}</p>
-      {questions ? <Questions questions={questions} activeIndex={activeIndex} /> : "loading"}
+      {questions ? <Questions questions={questions} activeIndex={activeIndex} submitAnswer={addAnswer} /> : "loading"}
        <div className="submit">
         <button className="submitButton">Continue</button>
         <p className="instructions">Read <span>Instructions</span></p>

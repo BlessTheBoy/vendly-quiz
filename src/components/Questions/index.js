@@ -1,14 +1,12 @@
-import Question from "../Question"
+import QuestionList from "../QuestionList";
 import './style.css';
 
 
 
-function Questions({questions, activeIndex}) {
+function Questions({questions, activeIndex, submitAnswer}) {
     return (
         <div className="questionsContainer">
-            {questions.map((questionSet, index) => <ol key={index} className={`questions ${index === activeIndex && "active"}`}>
-            {questionSet.map((item, index) => <Question key={index} question={item.question} options={item.option} />)}
-            </ol>)}
+            {questions.map((questionSet, index) => <QuestionList key={index} questionSet={questionSet} active={activeIndex === index} addAnswer={(x, answer) => submitAnswer([index, x], answer)} />)}
         </div>
 
         

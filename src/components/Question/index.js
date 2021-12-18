@@ -1,19 +1,20 @@
 import "./style.css";
 
-function Question({ question, options }) {
+function Question({ question, options, addAnswer }) {
   return (
     <li className="question">
       <p className="question_question">{question}</p>
       <div className="question_options">
-      {options.map((item) => (
-          <div className="radio">
+      {options.map((item, index) => (
+          <div className="radio" key={index}>
               <input
                 type="radio"
                 value={item}
                 name={question}
                 id={item}
+                onChange={() => addAnswer(item)}
               />
-            <label for={item} >
+            <label htmlFor={item} >
               
               {item}
             </label>
