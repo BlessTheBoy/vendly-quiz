@@ -21,7 +21,7 @@ function App() {
         const data = [
           {image: "liverbridge.png", caption: "Livebridge giving alms on any given Sunday.", questions: [{id: 1, question: "How many times has Vendly been redesigned?", option: ["Five times", "Four times", "Three times", "Two times"]}, {id: 2, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
           {image: "voucher.jpg", caption: "voucher", questions: [{id: 1, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
-          {image: "character.png", caption: "character", questions: [{id: 1, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
+          {image: "character.png", caption: "character", questions: [{id: 1, question: "Who is the current C.E.O of Vendly?", option: ["Bob Nzelu", "Micheal Opara", "Vanessa Mdee"]}]},
       ]
         setCarouselList(data)
         setQuestions(data.map(item => item.questions))
@@ -42,6 +42,8 @@ function App() {
 
   return (
     <div className="App">
+      {carouselList ? 
+      <>  
       <div className="container">
         <Header />
         {/* <Carousel /> */}
@@ -51,13 +53,14 @@ function App() {
         <RightArrow trigger={updateIndex} activeIndex={activeIndex} />
       </div>
       <Indicators arr={carouselList} trigger={updateIndex} activeIndex={activeIndex} />
-      <p className="carouselCaption">{carouselList[activeIndex].caption}</p>
-      {questions ? <Questions questions={questions} /> : "loading"}
+      <p className="carouselCaption">{captions[activeIndex]}</p>
+      {questions ? <Questions questions={questions} activeIndex={activeIndex} /> : "loading"}
        <div className="submit">
         <button className="submitButton">Continue</button>
         <p className="instructions">Read <span>Instructions</span></p>
        </div>
       </div>
+      </> : ""}
     </div>
   );
 }
