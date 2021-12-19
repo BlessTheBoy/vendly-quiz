@@ -34,7 +34,7 @@ line-height: 1.57;
 color: var(--cyan);
 }
 
-.radio{
+.radio label{
     display: flex;
     align-items: flex-start;
     margin-bottom: 1.25rem;
@@ -44,6 +44,35 @@ color: var(--cyan);
     accent-color: var(--cyan);
     height: 1rem;
     width: 1rem;
-    margin-right: 12px;
-    padding-top: 0.5rem;
+    /* padding-top: 0.5rem; */
 }
+
+/* Custom radio */
+/* pretty radio */
+.radio label::before{       
+    box-sizing: border-box;
+    margin-right: 0.84375rem;
+    flex-shrink: 0;
+}
+.radio > input[type="radio"] {
+    display: none;
+  }
+  .radio > input[type="radio"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;    
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: var(--cyan);
+  }
+  .radio > input[type="radio"]:checked + * {
+    color: teal;
+  }
+  .radio > input[type="radio"]:checked + *::before {
+    background: radial-gradient(var(--cyan) 0%, var(--cyan) 40%, transparent 50%, transparent);
+    border-color: var(--cyan);
+  }

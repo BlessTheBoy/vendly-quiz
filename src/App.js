@@ -27,7 +27,7 @@ function App() {
     useEffect(() => {
         // Retrieve carousel items (images and questions)
         const data = [
-          {image: "liverbridge.png", caption: "Livebridge giving alms on any given Sunday.", questions: [{id: 1, question: "How many times has Vendly been redesigned?", option: ["Five times", "Four times", "Three times", "Two times"]}, {id: 2, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
+          {image: "liverbridge.png", caption: "Livebridge giving alms on any given Sunday.", questions: [{id: 1, question: "How many times has Vendly been redesigned?", option: ["Flip through the pictures to answer the question correctly.", "Five times", "Four times", "Three times", "Two times"]}, {id: 2, question: "When was Vendly founded?", option: ["2021", "2020", "2019"]}]},
           {image: "voucher.jpg", caption: "voucher", questions: [{id: 1, question: "When was Vendly first redesign?", option: ["2021", "2020", "2019"]}]},
           {image: "character.png", caption: "character", questions: [{id: 1, question: "Who is the current C.E.O of Vendly?", option: ["Bob Nzelu", "Micheal Opara", "Vanessa Mdee"]}]},
       ]
