@@ -68,10 +68,11 @@ color: #006E72;
   border: none;
   font-family: "AxiformaBold", sans-serif;
 font-weight: normal;
-font-size: 0.9375rem;
+font-size: 1rem;
 line-height: 1.667;
 border-radius: 5px;
 margin-bottom: 1.5rem;
+vertical-align: baseline;
 }
 
 .button:disabled{

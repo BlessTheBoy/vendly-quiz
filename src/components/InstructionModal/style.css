@@ -28,9 +28,9 @@
     max-width: 500px;
     background-color: #E0FAF8;
     color: var(--cyan);
-    font-family: "Axiforma", sans-serif;
+    font-family: "AxiformaSemiBold", sans-serif;
 font-style: normal;
-font-weight: 600;
+font-weight: normal;
 font-size: 0.8125rem;
 line-height: 1.615;
 
@@ -53,9 +53,9 @@ line-height: 1.615;
   
   .modal-header {
     padding: 4.875rem 1.875rem 1.4375rem;
-    font-family: "AxiformaBold", sans-serif;
+    font-family: "AxiformaBlack", sans-serif;
 font-style: normal;
-font-weight: 800;
+font-weight: normal;
 font-size: 1.5rem;
 line-height: 1.667;
 color: #000;
