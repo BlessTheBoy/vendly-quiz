@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vendly-quiz/static/css/main.e9ef9372.css",
+    "main.css": "/vendly-quiz/static/css/main.c90b471a.css",
     "main.js": "/vendly-quiz/static/js/main.502744cd.js",
     "static/js/787.dcb531f0.chunk.js": "/vendly-quiz/static/js/787.dcb531f0.chunk.js",
     "static/media/voucher.jpg": "/vendly-quiz/static/media/voucher.3bec785d2a3613ab233e.jpg",
@@ -12,12 +12,12 @@
     "static/media/Axiforma-Light.ttf": "/vendly-quiz/static/media/Axiforma-Light.fe89ffb1a89f5ea2b030.ttf",
     "static/media/Axiforma-Book.ttf": "/vendly-quiz/static/media/Axiforma-Book.9b01bb5c6f096a53e78a.ttf",
     "index.html": "/vendly-quiz/index.html",
-    "main.e9ef9372.css.map": "/vendly-quiz/static/css/main.e9ef9372.css.map",
+    "main.c90b471a.css.map": "/vendly-quiz/static/css/main.c90b471a.css.map",
     "main.502744cd.js.map": "/vendly-quiz/static/js/main.502744cd.js.map",
     "787.dcb531f0.chunk.js.map": "/vendly-quiz/static/js/787.dcb531f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9ef9372.css",
+    "static/css/main.c90b471a.css",
     "static/js/main.502744cd.js"
   ]
 }
