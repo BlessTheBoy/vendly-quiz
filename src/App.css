@@ -31,8 +31,9 @@
 .carouselCaption{
   text-align: center;
   padding: 0 var(--padding-mobile-med);
-  font-family: "Axiforma", sans-serif;
-font-weight: 400;
+  font-family: "AxiformaMedium", sans-serif;
+font-weight: normal;
+font-style: normal;
 font-size: 0.6875rem;
 line-height: 1.55;
 color: var(--cyan);
@@ -45,8 +46,8 @@ color: var(--cyan);
 }
 
 .submit .instructions{
-  font-family: "Axiforma", sans-serif;
-  font-weight: 500;
+  font-family: "AxiformaMedium", sans-serif;
+  font-weight: normal;
 font-size: 0.75rem;
 line-height: 1.58;
 color: #006E72;
@@ -66,7 +67,7 @@ color: #006E72;
   outline: none;
   border: none;
   font-family: "AxiformaBold", sans-serif;
-font-weight: 800;
+font-weight: normal;
 font-size: 0.9375rem;
 line-height: 1.667;
 border-radius: 5px;

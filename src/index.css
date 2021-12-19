@@ -15,26 +15,51 @@
 
 /* Fonts */
 @font-face {
-  font-family: "Axiforma";
+  font-family: "AxiformaBook";
+  src: local("Axiforma"),
+   url("./assets/fonts/Axiforma/Axiforma-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: "AxiformaLight";
+  src: local("Axiforma"),
+   url("./assets/fonts/Axiforma/Axiforma-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  }
+@font-face {
+  font-family: "AxiformaRegular";
   src: local("Axiforma"),
    url("./assets/fonts/Axiforma/Axiforma-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
   }
 @font-face {
   font-family: "AxiformaMedium";
   src: local("Axiforma"),
    url("./assets/fonts/Axiforma/Axiforma-Medium.ttf") format("truetype");
-  font-weight: 500;
+   font-weight: normal;
+   font-style: normal;
   }
 @font-face {
   font-family: "AxiformaSemiBold";
   src: local("Axiforma"),
    url("./assets/fonts/Axiforma/Axiforma-SemiBold.ttf") format("truetype");
-  font-weight: 600;
+   font-weight: normal;
+   font-style: normal;
   }
 @font-face {
   font-family: "AxiformaBold";
   src: local("Axiforma"),
    url("./assets/fonts/Axiforma/Axiforma-Bold.ttf") format("truetype");
-  font-weight: 800;
+   font-weight: normal;
+   font-style: normal;
+  }
+@font-face {
+  font-family: "AxiformaBlack";
+  src: local("Axiforma"),
+   url("./assets/fonts/Axiforma/Axiforma-Black.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
   }
