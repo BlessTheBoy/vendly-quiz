@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5rem var(--padding-mobile-med);
-    column-gap: .3rem;
+    padding: 0.33rem var(--padding-mobile-med) 10px;
+    column-gap: 0.34375rem;
 }
 
 .indicator{
-    width: 0.32rem;
-    height: 0.32rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
     border-radius: 50%;
     background-color: var(--lemon);
 }
